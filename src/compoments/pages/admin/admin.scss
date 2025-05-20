@@ -1,0 +1,68 @@
+#admin {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+  
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+  
+    .admin {
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+      }
+  
+      .form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+  
+        input,
+        select {
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 8px;
+          font-size: 16px;
+          outline: none;
+  
+          &:focus {
+            border-color: #4caf50;
+          }
+        }
+  
+        select {
+          background-color: #fff;
+          color: #333;
+        }
+      }
+    }
+    button {
+        background: #274C5B;
+        border: none;
+        height: 44px;
+        border-radius: 10px;
+        color: white;
+    }
+  }
+  .message {
+    position: fixed;
+    top: 140px;
+    right: 20px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 500;
+    background-color: #dc3545;
+    transition: opacity 0.3s ease;
+    z-index: 9999;
+    &.error {
+      background-color: #28a745;
+    }
+  }

@@ -1,0 +1,135 @@
+#ourproduct {
+  padding: 40px 0;
+  button {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 480px;
+    margin-top: 30px;
+    width: 220px;
+    height: 60px;
+    background: #274c5b;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+  }
+  .ourproduct__title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #274c5b;
+  }
+  .ourproduct__img {
+    margin-left: 555px;
+  }
+  .ourproduct__grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .product-card {
+    position: relative;
+    width: 305px;
+    height: 443px;
+    background-color: rgba(128, 128, 128, 0.183);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+    transition: transform 0.2s;
+
+    h2 {
+      position: absolute;
+      right: 1px;
+      top: 5px;
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    &__category {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background-color: #204e45;
+      color: white;
+      padding: 5px 12px;
+      border-radius: 8px;
+      font-size: 12px;
+    }
+
+    &__image {
+      width: 100%;
+      height: 329px;
+      margin-bottom: 55px;
+      max-width: 329px;
+      border-radius: 30px;
+      object-fit: cover;
+      align-self: center;
+    }
+
+    &__name {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      text-align: center;
+      color: #1d2c2f;
+      margin-bottom: 8px;
+      align-self: flex-start;
+      margin-bottom: 15px;
+    }
+
+    &__footer {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+      border-top: 2px solid gray;
+
+      .price {
+        display: flex;
+        gap: 10px;
+
+        .old-price {
+          text-decoration: line-through;
+          color: hsl(0, 0%, 50%);
+          font-size: 22px;
+        }
+
+        .new-price {
+          color: #274c5b;
+          font-weight: bold;
+          font-size: 24px;
+        }
+      }
+
+      .rating {
+        color: #ff9529;
+        font-size: 24px;
+      }
+    }
+  }
+}
+.load-more {
+display: flex;
+align-items: center;
+justify-content: center;
+  cursor: pointer;
+  
+}
+.in-basket {
+  color: green;
+  pointer-events: none;
+  opacity: 0.6;
+}
