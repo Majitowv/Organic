@@ -1,27 +1,29 @@
-import React, { useContext, useEffect } from 'react';
-import {  useParams } from 'react-router-dom';
-import { OrganContext } from '../../context';
-import OurProduct from '../ui/OurProduct';
+import React, { useContext } from "react";
+import { useParams } from "react-router-dom";
+import { OrganContext } from "../../context";
+import OurProduct from "../ui/OurProduct";
 
 const Category = () => {
-    const { catName} = useParams()
-    const { product } = useContext(OrganContext)
+  const { catName } = useParams();
+  const { product } = useContext(OrganContext);
 
-    useEffect(() => {
-        window.scroll(0,0)
-    },[])
-    return (
-        <div>
-            <div className="container">
-                {
-                    product.map((el) => {
-                        return el.category === catName ? <OurProduct el={el} key={el.id}/> : null
+  const filteredProducts = product.filter((el) => el.productCategory === catName);
 
-                    })
-                }
-            </div>
+  return (
+    <div id="Category">
+      <div className="container">
+        <div className="category">
+          {filteredProducts.length ? (
+            filteredProducts.map((el) => (
+              <OurProduct key={el.id} productData={el} />
+            ))
+          ) : (
+            <h1>Загрузка данных...</h1>
+          )}
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default Category;
